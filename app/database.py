@@ -1,15 +1,12 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
-from typing import List
-from app.schemas import TodoSchema
-
 from app.config import get_settings
 
 
 settings = get_settings()
 
-engine = create_engine(settings.db_url)
+engine = create_engine(settings.DB_URL)
 
 SessionLocal = sessionmaker(
     autocommit = False,
@@ -27,17 +24,3 @@ def connect_db():
         yield db
     finally:
         db.close()
-
-# temp list
-todos: List[TodoSchema] = []
-
-_next_id = 1
-
-
-def get_next_id() -> int:
-    global _next_id
-
-    current_id = _next_id
-    _next_id += 1
-
-    return current_id
