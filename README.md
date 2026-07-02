@@ -5,4 +5,6 @@
 - .env
 ```
 DB_URL=postgresql://[username]:[password]@localhost:5432/[db]
+SECRET_KEY=
+TOKEN_EXPIRE=
 ```
