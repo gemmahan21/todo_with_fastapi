@@ -15,7 +15,7 @@ def find_todo(id: int, db: Session):
     return todo
 
 def match_author(todo: Todo, author: User):
-    if todo.user_id != author.id:
+    if todo.author_id != author.id:
         raise HTTPException(
             status_code=403,
             detail="You do not have permission."
