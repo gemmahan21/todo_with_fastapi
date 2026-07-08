@@ -9,22 +9,6 @@ SECRET_KEY=
 TOKEN_EXPIRE=
 ```
 
-- 프로젝트 구조
-todo/
-├─ main.py
-├─ .env
-├─ .gitignore
-├─ requirements.txt
-└─ app/
-   ├─ __init__.py
-   ├─ main.py
-   ├─ config.py
-   ├─ database.py
-   ├─ models.py
-   ├─ schemas.py
-   ├─ helpers.py
-   └─ security.py
-
 - 실행
 ```
 source .venv/bin/activate
